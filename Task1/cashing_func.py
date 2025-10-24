@@ -35,10 +35,12 @@ def caching_fibonacci(n):
         return ValueError("The argument must be a non-negative number.")
     if n in (0, 1):
         return n
+    
     return caching_fibonacci(n - 1) + caching_fibonacci(n - 2)
 
 
-# Отримуємо функцію fibonacci
+# Функцію fibonacci
+
 fib = caching_fibonacci
 
 # Використовуємо функцію fibonacci для обчислення чисел Фібоначчі
