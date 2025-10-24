@@ -44,14 +44,14 @@ def count_logs_by_level(logs: list) -> dict:
     return dict(Counter(levels))
 
 def display_log_counts(counts: dict):
-    print(f'Рівень логування | Кількість')
+    print(f'Logging level| Amount')
     print("-----------------|----------")
     for level, count in counts.items():
         color = log_colors.get(level, "")
         print(f"{color}{level:<16}{Style.RESET_ALL} | {count}")
 
 def display_log_details(logs: list, level: str):
-    result = [f'\nДеталі логів для певного рівня: {level}']
+    result = [f'\nLog details for a specific level: {level}']
     color = log_colors.get(level.upper(), "")
     for log in logs:
         result.append(f"{log['date']} {log['time']} {color}{log['level']}{Style.RESET_ALL} {log['message']}")

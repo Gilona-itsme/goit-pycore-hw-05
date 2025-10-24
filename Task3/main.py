@@ -9,7 +9,7 @@ from functions import load_logs, filter_logs_by_level, count_logs_by_level, pars
 
 def main():
     if len(sys.argv) < 2:
-        print(f"{Fore.YELLOW}Використання: python main.py path/to/logfile.log [level]{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Usage: python main.py path/to/logfile.log [level]{Style.RESET_ALL}")
         return
 
     file_path = sys.argv[1]
@@ -27,7 +27,7 @@ def main():
         if filtered:
             display_log_details(filtered, level)
         else:
-            print(f"\n{Fore.YELLOW}Немає записів для рівня '{level.upper()}'.{Style.RESET_ALL}")
+            print(f"\n{Fore.YELLOW}No entries for level '{level.upper()}'.{Style.RESET_ALL}")
 
 
 
